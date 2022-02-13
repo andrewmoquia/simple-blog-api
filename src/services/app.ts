@@ -1,11 +1,10 @@
 import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import { Database } from './database';
 import cookieParser from 'cookie-parser';
 
-export class Express {
+export class App {
    private app;
    private port;
    private origin;
@@ -16,32 +15,14 @@ export class Express {
       this.app = express();
       this.port = process.env.PORT;
       this.origin = process.env.ORIGIN;
-      this.database = process.env.DATABASE;
+      this.database = new Database();
       this.cookieSecret = process.env.COOKIE_SECRET;
-   }
-
-   public connectToDatabase() {
-      //
-      //IIFE =  a JavaScript function that runs as soon as it is defined.
-      (async () => {
-         try {
-            const db = await mongoose.connect(`${this.database}`);
-            return db
-               ? console.log(`Database '${db.connection.name}' is connected.`)
-               : console.log('Failed to connect.');
-         } catch (err) {
-            console.log(err);
-         }
-      })();
    }
 
    public start() {
       //
-      //Loads environment variables from a ".env" file into "process.env".
-      dotenv.config();
-      //
       //Connect to MongoDB
-      // this.connectToDatabase();
+      this.database.connect();
       //
       //Allow test in localhost:3000.
       this.app.set('trust proxy', 1);
