@@ -41,7 +41,7 @@ export class Express {
       dotenv.config();
       //
       //Connect to MongoDB
-      this.connectToDatabase();
+      // this.connectToDatabase();
       //
       //Allow test in localhost:3000.
       this.app.set('trust proxy', 1);
