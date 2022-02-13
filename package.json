@@ -1,20 +1,59 @@
 {
-  "name": "nodejs-express-oop-boilerplate",
-  "version": "1.0.0",
-  "description": "A template server app mainly written in Nodejs, Express, and Typescript.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrewmoquia/nodejs-express-oop-boilerplate.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andrewmoquia/nodejs-express-oop-boilerplate/issues"
-  },
-  "homepage": "https://github.com/andrewmoquia/nodejs-express-oop-boilerplate#readme"
+   "name": "nodejs-express-oop-boilerplate",
+   "version": "1.0.0",
+   "description": "A template server app mainly written in Nodejs, Express, and Typescript.",
+   "main": "index.js",
+   "scripts": {
+      "build": "tsc -p .",
+      "start": "node build/dist/index.js",
+      "dev": "nodemon --exec ts-node src/index.ts",
+      "heroku-prebuild": "npm install",
+      "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+      "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/andrewmoquia/nodejs-express-oop-boilerplate.git"
+   },
+   "keywords": [
+      "nodejs",
+      "express",
+      "typescript",
+      "oop"
+   ],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/andrewmoquia/nodejs-express-oop-boilerplate/issues"
+   },
+   "homepage": "https://github.com/andrewmoquia/nodejs-express-oop-boilerplate#readme",
+   "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "cookie-parser": "^1.4.6",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.0",
+      "express": "^4.17.2",
+      "helmet": "^5.0.2",
+      "mongoose": "^6.2.1",
+      "node": "^17.4.0",
+      "typescript": "^4.5.5"
+   },
+   "devDependencies": {
+      "@types/cookie-parser": "^1.4.2",
+      "@types/cors": "^2.8.12",
+      "@types/express": "^4.17.13",
+      "@typescript-eslint/eslint-plugin": "^5.11.0",
+      "@typescript-eslint/parser": "^5.11.0",
+      "eslint": "^8.9.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-eslint-comments": "^3.2.0",
+      "eslint-plugin-import": "^2.25.4",
+      "eslint-plugin-prettier": "^4.0.0",
+      "husky": "^7.0.4",
+      "lint-staged": "^12.3.3",
+      "nodemon": "^2.0.15",
+      "prettier": "^2.5.1",
+      "ts-node-dev": "^1.1.8"
+   }
 }
