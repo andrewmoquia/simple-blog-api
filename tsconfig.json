@@ -1,0 +1,57 @@
+{
+   "compilerOptions": {
+      //
+      //Allows you to write an import instead of require()
+      "esModuleInterop": true,
+      //
+      //Raise error if when the module does not explicitly specify a default export.
+      "allowSyntheticDefaultImports": true,
+      //
+      //Throw errors instead of silently ignoring them.
+      "alwaysStrict": true,
+      //
+      //Lets you set a base directory to resolve non-absolute module names.
+      "baseUrl": ".",
+      //
+      //The directory structure of the original source files is preserved
+      "outDir": "build/dist",
+      //
+      //Sets the module system for the program.
+      "module": "commonjs",
+      //
+      //Run in newer environments.
+      "target": "es6",
+      //
+      //TypeScript includes a default set of type definitions for built-in JS APIs (like Math),
+      //as well as type definitions for things found in browser environments (like document).
+      "lib": ["es6"],
+      //
+      //Allow debuggers and other tools to display the original TypeScript source code.
+      "sourceMap": false,
+      //
+      //Skip type checking of default library declaration files.
+      "skipLibCheck": true,
+      //
+      //Allow JavaScript files to be imported inside your project.
+      "allowJs": true,
+      //
+      //Module resolution strategy
+      "moduleResolution": "node",
+      //
+      //Keeps the same directory structure in the output directory as exists in the input directory.
+      "rootDir": "src",
+      //
+      //TypeScript will check all code paths in a function to ensure they return a value.
+      "noImplicitReturns": true,
+      //
+      //Raise error on ‘this’ expressions with an implied ‘any’ type.
+      "noImplicitThis": true,
+      //
+      //TypeScript will issue an error whenever it would have inferred any.
+      "noImplicitAny": true,
+      //
+      //Raise an error that you have not made a guarantee that the variables exists before trying to use it.
+      "strictNullChecks": true
+   },
+   "include": ["typings/**/*", "src/**/*"]
+}
