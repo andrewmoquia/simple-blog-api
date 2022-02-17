@@ -1,7 +1,7 @@
 {
-   "name": "nodejs-express-oop-boilerplate",
+   "name": "simple-blog-api",
    "version": "1.0.0",
-   "description": "A template server app mainly written in Nodejs, Express, and Typescript.",
+   "description": "A simple web API server using NodeJS & ExpressJS that will provide resources for our frontend application.",
    "main": "index.js",
    "scripts": {
       "build": "tsc -p .",
@@ -20,7 +20,8 @@
       "nodejs",
       "express",
       "typescript",
-      "oop"
+      "oop",
+      "blog"
    ],
    "author": "",
    "license": "ISC",
