@@ -30,9 +30,9 @@ A simple web API server using NodeJS & ExpressJS that will provide resources for
 `COOKIE_SECRET='secret'`
 6. Start dev.
 `npm run dev`
-6. Build and bundling your resources for production.
+7. Build and bundling your resources for production.
 `npm run build`
-Note: `npm start` is reserve in deployment in production.
+8. Note: `npm start` is reserve in deployment in production.
 
 ## Configuration
 - `./.prettierrc.js` config for Prettier.
