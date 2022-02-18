@@ -23,11 +23,13 @@ A simple web API server using NodeJS & ExpressJS that will provide resources for
 2. Make sure to open the folder of `./simple-blog-api` in your IDE like Visual Studio Code.
 3. Install packages.
 `npm install`
-4. Setup env
+4. Create ".env" file in your root folder and setup this.
+```
 `MONGO_URI=your_mongo_uri`
 `PORT=5000`
 `ORIGIN='http://localhost:3000'`
 `COOKIE_SECRET='secret'`
+```
 6. Start dev.
 `npm run dev`
 7. Build and bundling your resources for production.
