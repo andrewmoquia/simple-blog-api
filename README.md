@@ -19,7 +19,7 @@ A simple web API server using NodeJS & ExpressJS that will provide resources for
 
 ## Installation
 1. Clone the boilerplate repo
-`https://github.com/andrewmoquia/simple-blog-api.git`
+`git clone https://github.com/andrewmoquia/simple-blog-api.git`
 2. Make sure to open the folder of `./simple-blog-api` in your IDE like Visual Studio Code.
 3. Install packages.
 `npm install`
