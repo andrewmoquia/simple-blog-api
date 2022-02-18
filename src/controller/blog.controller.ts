@@ -16,7 +16,7 @@ export class BlogController extends Blog {
       //Route for finding one blog.
       this.router.delete('/delete/blog/:id', this.deleteOneBlog);
       //
-      //Route for finding one blog.
+      //Route for deletion one blog.
       this.router.get('/blog/:id', this.getOneBlog);
       //
       //Route for filtering of blog.
