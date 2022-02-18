@@ -1,8 +1,9 @@
-import express from 'express';
-import helmet from 'helmet';
 import cors from 'cors';
-import { Database } from './database';
+import helmet from 'helmet';
+import express from 'express';
 import cookieParser from 'cookie-parser';
+import { Database } from './database';
+import { BlogRouter } from '../router';
 
 export class App {
    private app;
@@ -39,14 +40,20 @@ export class App {
       this.app.use(express.json());
       //
       //Parse application/x-www-form-urlencoded, basically can only parse incoming Request Object if strings or arrays
-      this.app.use(express.urlencoded({ extended: false }));
+      this.app.use(express.urlencoded({ extended: true }));
       //
       //Parse Cookie header and populate req.cookies with an object keyed by the cookie names.
       this.app.use(cookieParser(this.cookieSecret));
       //
+      //Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
+      // this.app.use(bodyParser.raw());
+      //
       //Add 11 layer of security
       //https://helmetjs.github.io/
       this.app.use(helmet());
+      //
+      //Handle routes for blog requests.
+      this.app.use(BlogRouter);
       //
       //Initiate the server app
       this.app.listen(this.port, () => {
