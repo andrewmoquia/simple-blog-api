@@ -27,7 +27,7 @@ A simple web API server using NodeJS & ExpressJS that will provide resources for
 ```
 MONGO_URI=your_mongo_uri
 PORT=5000
-ORIGIN='http://localhost:3000'
+ORIGIN='http://localhost:5000'
 COOKIE_SECRET='secret'
 ```
 6. Start dev.
