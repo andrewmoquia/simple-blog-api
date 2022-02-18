@@ -25,10 +25,10 @@ A simple web API server using NodeJS & ExpressJS that will provide resources for
 `npm install`
 4. Create ".env" file in your root folder and setup this.
 ```
-`MONGO_URI=your_mongo_uri`
-`PORT=5000`
-`ORIGIN='http://localhost:3000'`
-`COOKIE_SECRET='secret'`
+MONGO_URI=your_mongo_uri
+PORT=5000
+ORIGIN='http://localhost:3000'
+COOKIE_SECRET='secret'
 ```
 6. Start dev.
 `npm run dev`
