@@ -14,10 +14,10 @@ export class App {
 
    constructor() {
       this.app = express();
-      this.port = process.env.PORT;
-      this.origin = process.env.ORIGIN;
+      this.port = process.env.PORT || 5000;
+      this.origin = process.env.ORIGIN || 'http://localhost:5000';
       this.database = new Database();
-      this.cookieSecret = process.env.COOKIE_SECRET;
+      this.cookieSecret = process.env.COOKIE_SECRET || 'secret';
    }
 
    public start() {
