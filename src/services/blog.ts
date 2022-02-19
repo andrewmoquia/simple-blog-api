@@ -20,7 +20,7 @@ export class Blog {
       this.router = Router();
    }
 
-   //Middllware to allowed us to upload file in form-data.
+   //Middleware to allowed us to upload file in form-data.
    public uploadFile: RequestHandler = (req: any, res: any, next: any) => {
       //
       //Error handling in Multer.
@@ -88,7 +88,7 @@ export class Blog {
          //Save the blog document in the mongodb.
          const saveBlog = await newBlog.save();
          saveBlog ? /* Success */ res.send(saveBlog) : /* Failed */ next();
-
+         //
          //Error Handling
       } catch (error) {
          res.send(error);
@@ -203,6 +203,7 @@ export class Blog {
       }
    };
 
+   //Handle of searching of blogs based on title.
    public searchBlog: RequestHandler = async (req, res) => {
       try {
          const { search } = req.query;
