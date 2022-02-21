@@ -13,10 +13,10 @@ export class BlogController extends Blog {
       //Route for updating of blog.
       this.router.put('/update/blog', this.uploadFile, this.updateBlog);
       //
-      //Route for finding one blog.
+      //Route for deletion one blog.
       this.router.delete('/delete/blog/:id', this.deleteOneBlog);
       //
-      //Route for deletion one blog.
+      //Route for finding one blog.
       this.router.get('/blog/:id', this.getOneBlog);
       //
       //Route for filtering of blog.
